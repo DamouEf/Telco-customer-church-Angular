@@ -1,0 +1,274 @@
+<form action="" [formGroup]="predictForm" (ngSubmit)="predict()">
+  <div class="form-group container">
+    <fieldset>
+
+       <!-- Gender -->
+      <label
+      class="m-1"
+      for="gender">Gender :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('gender')?.touched && predictForm.get('gender')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="gender"
+      >
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+
+       <!-- seniorCitizen -->
+      <label
+      class="m-1"
+      for="seniorCitizen">Senior Citizen :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('seniorCitizen')?.touched && predictForm.get('seniorCitizen')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="seniorCitizen"
+      >
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- partner -->
+      <label
+      class="m-1"
+      for="partner">Partner :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('partner')?.touched && predictForm.get('partner')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="partner"
+      >
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+       <!-- dependents -->
+      <label
+      class="m-1"
+      for="dependents">Dependents :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('dependents')?.touched && predictForm.get('dependents')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="dependents"
+      >
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- tenure -->
+      <label
+      class="m-1"
+      for="tenure">Tenure :</label>
+      <input type="number"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('tenure')?.touched && predictForm.get('tenure')?.errors != null}"
+      class="m-3 form-control"
+      placeholder="Tenure"
+      formControlName="tenure">
+
+      <!-- phoneService -->
+      <label
+      class="m-1"
+      for="phoneService">Phone Service :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('phoneService')?.touched && predictForm.get('phoneService')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="phoneService"
+      >
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- multipleLines -->
+      <label
+      class="m-1"
+      for="multipleLines">Multiple Lines :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('multipleLines')?.touched && predictForm.get('multipleLines')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="multipleLines"
+      >
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="no phone service">No phone service</option>
+      </select>
+
+      <!-- internetService -->
+      <label
+      class="m-1"
+      for="internetService">Internet Service :</label>
+      <select
+      class="form-select form-select-sm m-3 form-control"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('internetService')?.touched && predictForm.get('internetService')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="internetService"
+      >
+        <option value="dsl">DSL</option>
+        <option value="fibre optic">Fibre Optic</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- onlineSecurity -->
+      <label
+      class="m-1"
+      for="onlineSecurity">Online Security :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('onlineSecurity')?.touched && predictForm.get('onlineSecurity')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="onlineSecurity"
+      >
+        <option value="no internet service">No internet service</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- onlineBackup -->
+      <label
+      class="m-1"
+      for="onlineBackup">Online Backup :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('onlineBackup')?.touched && predictForm.get('onlineBackup')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="onlineBackup"
+      >
+        <option value="no internet service">No internet service</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- deviceProtection -->
+      <label
+      class="m-1"
+      for="deviceProtection">Device Protection :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('deviceProtection')?.touched && predictForm.get('deviceProtection')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="deviceProtection"
+      >
+        <option value="no internet service">No internet service</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- techSupport -->
+      <label
+      class="m-1"
+      for="techSupport">Technical Support :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('techSupport')?.touched && predictForm.get('techSupport')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="techSupport"
+      >
+        <option value="no internet service">No internet service</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- streamingTv -->
+      <label
+      class="m-1"
+      for="streamingTv">Streaming Tv :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('streamingTv')?.touched && predictForm.get('streamingTv')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="streamingTv"
+      >
+        <option value="no internet service">No internet service</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- streamingMovies -->
+      <label
+      class="m-1"
+      for="streamingMovies">Streaming Movies :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('streamingMovies')?.touched && predictForm.get('streamingMovies')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="streamingMovies"
+      >
+        <option value="no internet service">No internet service</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- contract -->
+      <label
+      class="m-1"
+      for="contract">contract :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('contract')?.touched && predictForm.get('contract')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="contract"
+      >
+        <option value="month-to-month">Month to month</option>
+        <option value="one year">One year</option>
+        <option value="two year">Two year</option>
+      </select>
+
+      <!-- paperlessBilling -->
+      <label
+      class="m-1"
+      for="paperlessBilling">Paperless Billing :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('paperlessBilling')?.touched && predictForm.get('paperlessBilling')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="paperlessBilling"
+      >
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- paymentMethod -->
+      <label
+      class="m-1"
+      for="paymentMethod">Payment Method :</label>
+      <select
+      class="form-select form-select-sm m-3"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('paymentMethod')?.touched && predictForm.get('paymentMethod')?.errors != null}"
+      aria-label=".form-select-sm example"
+      formControlName="paymentMethod"
+      >
+        <option value="bank transfer (automatic)">Bank transfer</option>
+        <option value="credit card (automatic)">Credit card</option>
+        <option value="electronic check">Electronic check</option>
+        <option value="mailed check">Mailed check</option>
+      </select>
+
+      <!-- monthlyCharges -->
+      <label
+      class="m-1"
+      for="monthlyCharges">Monthly Charges :</label>
+      <input type="number"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('monthlyCharges')?.touched && predictForm.get('monthlyCharges')?.errors != null}"
+      class="m-3 form-control"
+      placeholder="Monthly Charges"
+      formControlName="monthlyCharges">
+
+
+      <!-- totalesCharges -->
+      <label
+      class="m-1"
+      for="totalesCharges">Totales Charges :</label>
+      <input type="number"
+      [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('totalesCharges')?.touched && predictForm.get('totalesCharges')?.errors != null}"
+      class="m-3 form-control"
+      placeholder="Totales Charges"
+      formControlName="totalesCharges">
+
+    </fieldset>
+    <button class="m-3 btn btn-success" [disabled]="predictForm.invalid">Predict</button>
+  </div>
+</form>

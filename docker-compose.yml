@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+
+    telco-customer-front:
+        image: node:latest
+        container_name: telco-customer-front
+        restart: unless-stopped
+        command: sh -c 'tail -f /dev/null'
+        ports:
+            - 4200:4200
+        working_dir: /code
+        volumes:
+            - .:/code
+            - ./node_modules:/code/node_modules
+
+
