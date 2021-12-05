@@ -2,7 +2,7 @@
 class="list-group list-group-horizontal"
  [formGroup]="predictForm"
  (ngSubmit)="predict()">
-  <div class="form-group container col-6 scroll card m-2 p-3">
+  <div class="form-group container col-3 scroll card m-2 p-3">
     <fieldset>
 
        <!-- Gender -->
@@ -10,7 +10,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="gender">Gender :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('gender')?.touched && predictForm.get('gender')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="gender"
@@ -24,7 +24,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="seniorCitizen">Senior Citizen :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('seniorCitizen')?.touched && predictForm.get('seniorCitizen')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="seniorCitizen"
@@ -38,7 +38,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="partner">Partner :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('partner')?.touched && predictForm.get('partner')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="partner"
@@ -52,7 +52,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="dependents">Dependents :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('dependents')?.touched && predictForm.get('dependents')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="dependents"
@@ -67,7 +67,7 @@ class="list-group list-group-horizontal"
       for="tenure">Tenure :</label>
       <input type="number"
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('tenure')?.touched && predictForm.get('tenure')?.errors != null}"
-      class="m-3 form-control"
+      class=" form-control"
       placeholder="Tenure"
       formControlName="tenure">
 
@@ -76,7 +76,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="phoneService">Phone Service :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('phoneService')?.touched && predictForm.get('phoneService')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="phoneService"
@@ -90,7 +90,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="multipleLines">Multiple Lines :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('multipleLines')?.touched && predictForm.get('multipleLines')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="multipleLines"
@@ -105,7 +105,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="internetService">Internet Service :</label>
       <select
-      class="form-select form-select-sm m-3 form-control"
+      class="form-select form-select-sm  form-control"
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('internetService')?.touched && predictForm.get('internetService')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="internetService"
@@ -120,7 +120,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="onlineSecurity">Online Security :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('onlineSecurity')?.touched && predictForm.get('onlineSecurity')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="onlineSecurity"
@@ -135,7 +135,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="onlineBackup">Online Backup :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('onlineBackup')?.touched && predictForm.get('onlineBackup')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="onlineBackup"
@@ -150,7 +150,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="deviceProtection">Device Protection :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('deviceProtection')?.touched && predictForm.get('deviceProtection')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="deviceProtection"
@@ -165,7 +165,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="techSupport">Technical Support :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('techSupport')?.touched && predictForm.get('techSupport')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="techSupport"
@@ -180,7 +180,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="streamingTv">Streaming Tv :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('streamingTv')?.touched && predictForm.get('streamingTv')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="streamingTv"
@@ -195,7 +195,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="streamingMovies">Streaming Movies :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('streamingMovies')?.touched && predictForm.get('streamingMovies')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="streamingMovies"
@@ -210,7 +210,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="contract">contract :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('contract')?.touched && predictForm.get('contract')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="contract"
@@ -225,7 +225,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="paperlessBilling">Paperless Billing :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('paperlessBilling')?.touched && predictForm.get('paperlessBilling')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="paperlessBilling"
@@ -239,7 +239,7 @@ class="list-group list-group-horizontal"
       class="m-1"
       for="paymentMethod">Payment Method :</label>
       <select
-      class="form-select form-select-sm m-3"
+      class="form-select form-select-sm "
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('paymentMethod')?.touched && predictForm.get('paymentMethod')?.errors != null}"
       aria-label=".form-select-sm example"
       formControlName="paymentMethod"
@@ -256,7 +256,7 @@ class="list-group list-group-horizontal"
       for="monthlyCharges">Monthly Charges :</label>
       <input type="number"
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('monthlyCharges')?.touched && predictForm.get('monthlyCharges')?.errors != null}"
-      class="m-3 form-control"
+      class=" form-control"
       placeholder="Monthly Charges"
       formControlName="monthlyCharges">
 
@@ -267,17 +267,102 @@ class="list-group list-group-horizontal"
       for="totalesCharges">Totales Charges :</label>
       <input type="number"
       [ngClass]="{'is-invalid': predictForm.invalid && predictForm.get('totalesCharges')?.touched && predictForm.get('totalesCharges')?.errors != null}"
-      class="m-3 form-control"
+      class=" form-control"
       placeholder="Totales Charges"
       formControlName="totalesCharges">
 
     </fieldset>
-    <button class="m-3 btn btn-success" [disabled]="predictForm.invalid">Predict</button>
+
   </div>
   <div class="m-1 col-6">
     <h1>Result : </h1>
-    <div>
-      KNN : {{result?.knn}}
+    <div  class="card">
+
+      <div
+      [ngClass]="{'bg-success': result?.knn == 1, 'bg-danger': result?.knn == 0, 'bg-warning': result?.knn == undefined }"
+      class="card text-white mb-3" style="max-width: 18rem;">
+        <div class="card-header">KNN</div>
+        <div class="card-body">
+          <h5
+          *ngIf="result?.knn == 1"
+          class="card-title">Yes</h5>
+          <h5
+          *ngIf="result?.knn == 0"
+          class="card-title">No</h5>
+        </div>
+      </div>
+
+      <div
+      [ngClass]="{'bg-success': result?.svm == 1, 'bg-danger': result?.svm == 0, 'bg-warning': result?.svm == undefined }"
+      class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">SVM</div>
+        <div class="card-body">
+          <h5
+          *ngIf="result?.svm == 1"
+          class="card-title">Yes</h5>
+          <h5
+          *ngIf="result?.svm == 0"
+          class="card-title">No</h5>
+        </div>
+      </div>
+
+      <div
+      [ngClass]="{'bg-success': result?.lr == 1, 'bg-danger': result?.lr == 0, 'bg-warning': result?.lr == undefined }"
+      class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Linear regression</div>
+        <div class="card-body">
+          <h5
+          *ngIf="result?.lr == 1"
+          class="card-title">Yes</h5>
+          <h5
+          *ngIf="result?.lr == 0"
+          class="card-title">No</h5>
+        </div>
+      </div>
+
+      <div
+      [ngClass]="{'bg-success': result?.nb == 1, 'bg-danger': result?.nb == 0, 'bg-warning': result?.nb == undefined }"
+      class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Gaussian naive bayes</div>
+        <div class="card-body">
+          <h5
+          *ngIf="result?.nb == 1"
+          class="card-title">Yes</h5>
+          <h5
+          *ngIf="result?.nb == 0"
+          class="card-title">No</h5>
+        </div>
+      </div>
+
+      <div
+      [ngClass]="{'bg-success': result?.rf == 1, 'bg-danger': result?.rf == 0, 'bg-warning': result?.rf == undefined }"
+      class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Random forest</div>
+        <div class="card-body">
+          <h5
+          *ngIf="result?.rf == 1"
+          class="card-title">Yes</h5>
+          <h5
+          *ngIf="result?.rf == 0"
+          class="card-title">No</h5>
+        </div>
+      </div>
+
+      <div
+      [ngClass]="{'bg-success': result?.dt == 1, 'bg-danger': result?.dt == 0, 'bg-warning': result?.dt == undefined }"
+      class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Decision tree</div>
+        <div class="card-body">
+          <h5
+          *ngIf="result?.dt == 1"
+          class="card-title">Yes</h5>
+          <h5
+          *ngIf="result?.dt == 0"
+          class="card-title">No</h5>
+        </div>
+      </div>
+
     </div>
+    <button class=" btn btn-success" [disabled]="predictForm.invalid">Predict</button>
   </div>
 </form>
