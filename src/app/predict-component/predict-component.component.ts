@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Customer } from '../models/customer.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CustomerService } from '../services/customer.service';
+import { Result } from '../models/result.model';
 
 @Component({
   selector: 'app-predict-component',
@@ -18,6 +19,7 @@ export class PredictComponentComponent implements OnInit {
 
   // Attributes
   customer: Customer | undefined;
+  result: Result | undefined;
 
   // Form groupe add store
   predictForm: FormGroup = new FormGroup({
@@ -129,7 +131,7 @@ export class PredictComponentComponent implements OnInit {
     };
 
     await this.customerService.predict(this.customer).then(
-      result => console.log(result)
+      result => this.result = result
     );
   }
 

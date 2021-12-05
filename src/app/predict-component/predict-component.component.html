@@ -1,5 +1,8 @@
-<form action="" [formGroup]="predictForm" (ngSubmit)="predict()">
-  <div class="form-group container">
+<form
+class="list-group list-group-horizontal"
+ [formGroup]="predictForm"
+ (ngSubmit)="predict()">
+  <div class="form-group container col-6 scroll card m-2 p-3">
     <fieldset>
 
        <!-- Gender -->
@@ -270,5 +273,11 @@
 
     </fieldset>
     <button class="m-3 btn btn-success" [disabled]="predictForm.invalid">Predict</button>
+  </div>
+  <div class="m-1 col-6">
+    <h1>Result : </h1>
+    <div>
+      KNN : {{result?.knn}}
+    </div>
   </div>
 </form>
