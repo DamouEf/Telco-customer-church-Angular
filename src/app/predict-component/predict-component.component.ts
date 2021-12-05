@@ -47,13 +47,59 @@ export class PredictComponentComponent implements OnInit {
   get gender() {
     return this.predictForm.get('gender');
   }
-
   get seniorCitizen() {
     return this.predictForm.get('seniorCitizen');
   }
-
   get partner() {
     return this.predictForm.get('partner');
+  }
+  get dependents() {
+    return this.predictForm.get('dependents');
+  }
+  get tenure() {
+    return this.predictForm.get('tenure');
+  }
+  get phoneService() {
+    return this.predictForm.get('phoneService');
+  }
+  get multipleLines() {
+    return this.predictForm.get('multipleLines');
+  }
+  get internetService() {
+    return this.predictForm.get('internetService');
+  }
+  get onlineSecurity() {
+    return this.predictForm.get('onlineSecurity');
+  }
+  get onlineBackup() {
+    return this.predictForm.get('onlineBackup');
+  }
+  get deviceProtection() {
+    return this.predictForm.get('deviceProtection');
+  }
+  get techSupport() {
+    return this.predictForm.get('techSupport');
+  }
+  get streamingTv() {
+    return this.predictForm.get('streamingTv');
+  }
+  get streamingMovies() {
+    return this.predictForm.get('streamingMovies');
+  }
+  get contract() {
+    return this.predictForm.get('contract');
+  }
+  get paperlessBilling() {
+    return this.predictForm.get('paperlessBilling');
+  }
+  get paymentMethod() {
+    return this.predictForm.get('paymentMethod');
+  }
+  get monthlyCharges() {
+    return this.predictForm.get('monthlyCharges');
+  }
+  get totalesCharges() {
+    return this.predictForm.get('totalesCharges');
   }
 
   // predict function
