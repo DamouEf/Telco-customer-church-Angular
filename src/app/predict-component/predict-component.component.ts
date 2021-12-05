@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../models/customer.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   selector: 'app-predict-component',
@@ -9,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class PredictComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
   }
@@ -104,14 +105,32 @@ export class PredictComponentComponent implements OnInit {
 
   // predict function
   async predict() {
-    // init object with data from form
-  //   this.customer = {
-  //     name: this.name.value,
-  //     address: this.address.value,
-  //   };
-  //   await this.storeServie.create(this.store).then(
-  //     store => this.router.navigate(['/stores'])
-  //   );
+  //init object with data from form
+    this.customer = {
+      gender: this.gender ? this.gender.value : null,
+      senior_citizen: this.seniorCitizen ? this.seniorCitizen.value : null,
+      partner: this.partner ? this.partner.value : null,
+      dependents: this.dependents ? this.dependents.value : null,
+      tenure: this.tenure ? this.tenure.value : null,
+      phone_service: this.phoneService ? this.phoneService.value : null,
+      multiple_lines: this.multipleLines ? this.multipleLines.value : null,
+      internet_service: this.internetService ? this.internetService.value : null,
+      online_security: this.onlineSecurity ? this.onlineSecurity.value : null,
+      online_backup: this.onlineBackup ? this.onlineBackup.value : null,
+      device_protection: this.deviceProtection ? this.deviceProtection.value : null,
+      tech_support: this.techSupport ? this.techSupport.value : null,
+      streaming_tv: this.streamingTv ? this.streamingTv.value : null,
+      streaming_movies: this.streamingMovies ? this.streamingMovies.value : null,
+      contract: this.contract ? this.contract.value : null,
+      paperless_billing: this.paperlessBilling ? this.paperlessBilling.value : null,
+      payment_method: this.paymentMethod ? this.paymentMethod.value : null,
+      monthly_charges: this.monthlyCharges ? this.monthlyCharges.value : null,
+      totales_charges: this.totalesCharges ? this.totalesCharges.value : null,
+    };
+
+    await this.customerService.predict(this.customer).then(
+      result => console.log(result)
+    );
   }
 
 
